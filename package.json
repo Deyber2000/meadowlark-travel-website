@@ -11,5 +11,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deyber2000/meadowlark-travel-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Deyber2000/meadowlark-travel-website/issues"
+  },
+  "homepage": "https://github.com/Deyber2000/meadowlark-travel-website#readme"
 }

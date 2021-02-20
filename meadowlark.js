@@ -10,8 +10,20 @@ app.engine('handlebars', expressHandlebars({
 }));
 app.set('view engine', 'handlebars');
 
+//define static middleware
+app.use(express.static(__dirname + '/public'))
+const fortunes = [
+  "Conquer your fears or they will conquer you.",
+  "Rivers need springs.",
+  "Do not fear what you don't know.",
+  "You will have a pleasant surprise.",
+  "Whenever possible, keep it simple.",
+  ]
 app.get('/', (req, res) => res.render('home'));
-app.get('/about', (req, res) => res.render('about'));
+app.get('/about', (req, res) => {
+  const randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)]
+  res.render('about', { fortune: randomFortune })
+})
 app.use((req, res) => {
   res.status(404);
   res.render('404');
